@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+</head>
+<body>
+  <ons-page>
+      <ons-toolbar>
+          <div class="center">Framework Tip Calculator</div>
+      </ons-toolbar>
+      <!-- Form Section-->
+      <section style="padding: 8px;">
+      <div style="margin-bottom: 20px;"><!-- A space vacated to hold the input bill amount-->
+      <input class="text-input text-input--material" placeholder="Bill Amount" type="text" style="width:100%" required id="billAmount">
+      </div>
+      <div style="margin-bottom: 20px;">
+     <ons-range style="width: 75%;" value="18" min="0" max="50" step=".5" id="tipRange">
+    </ons-range>
+    <output id="percentOut">18%</output>
+    </div>
+    <div style="color: blueviolet;">
+    <ons-button modifier="larger" id="btnCalculate">Calculate Tip
+    </ons-button>
+    </div>
+    </section>
+    <!-- Result Section-->
+    <section style="padding: 8px;">
+    <div style="background: cadetblue; display: inline-block;">
+    <output id="result"></output>
+    </div>
+    </section>
+  </ons-page>
+  <script src="tip.js"></script> <!-- Connection to our js file-->
+</body>
+</html>
